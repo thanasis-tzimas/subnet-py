@@ -28,5 +28,5 @@ This is calculated as: `Start Address + 1`
 * End(Last) Usable Address of the Subnet
 This is calculated as: `Broadcast Address - 1`
 
-* Total Host in Subnet  
+* Total Hosts in Subnet  
 This is calculated as: `2**(N [of bits in IPv4] - CIDR [prefix]) - 2 [Router and Broadcast IPs]`
