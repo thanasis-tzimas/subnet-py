@@ -48,7 +48,7 @@ start_ip = inet_ntoa((ip & masks[cidr]).to_bytes(4, 'big'))
 end_ip = inet_ntoa((ip | (~masks[cidr] & 0xffffffff)).to_bytes(4, 'big'))
 start_usable = inet_ntoa(((ip & masks[cidr]) + 1).to_bytes(4, 'big'))
 end_usable = inet_ntoa(((ip | (~masks[cidr] & 0xffffffff)) - 1).to_bytes(4, 'big'))
-broadcast_ip = end_usable
+broadcast_ip = end_ip
 ip = inet_ntoa(ip.to_bytes(4, 'big'))
 
 print(f'Subnet Address: {ip}/{cidr}')

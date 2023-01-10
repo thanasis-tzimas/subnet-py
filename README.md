@@ -9,7 +9,7 @@ Subnet Address: 20.10.20.10/13
 Range of IP Addresses: 20.8.0.0 - 20.15.255.255
 Usable IPs: 20.8.0.1 - 20.15.255.254
 Hosts: 524286
-Broadcast IP: 20.15.255.254
+Broadcast IP: 20.15.255.255
 ```
 
 ## How it does the calculations
