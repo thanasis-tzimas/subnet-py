@@ -41,8 +41,8 @@ cidr = int(argv[2], base = 10)
 
 ip = 0x0
 i = 3
-for octate in ipv4:
-    ip += int(octate, base = 10) * 0x100 ** i
+for octet in ipv4:
+    ip += int(octet, base = 10) * 0x100 ** i
     i -= 1
 start_ip = inet_ntoa((ip & masks[cidr]).to_bytes(4, 'big'))
 end_ip = inet_ntoa((ip | (~masks[cidr] & 0xffffffff)).to_bytes(4, 'big'))
@@ -54,5 +54,5 @@ ip = inet_ntoa(ip.to_bytes(4, 'big'))
 print(f'Subnet Address: {ip}/{cidr}')
 print(f'Range of IP Addresses: {start_ip} - {end_ip}')
 print(f'Usable IPs: {start_usable} - {end_usable}')
-print(f'Hosts: {masks[cidr]-2}')
+print(f'Hosts: {2**(32 - cidr)-2}')
 print(f'Broadcast IP: {broadcast_ip}')
